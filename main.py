@@ -55,7 +55,9 @@ def main() -> None:
 
     The length gate keeps the entry inside the 1–200 char bounty limit,
     and the round-trip assert in :func:`write_entry` proves the file on
-    disk is exactly TEXT + newline (byte-identical every run).
+    disk is exactly TEXT + newline (byte-identical every run). The output
+    directory comes from ``$MAKEFUN_OUTPUT_DIR`` and defaults to
+    ``/output`` when the variable is unset.
     """
     assert 1 <= len(TEXT) <= 200, "entry text out of range"
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
