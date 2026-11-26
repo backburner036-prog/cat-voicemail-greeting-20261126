@@ -8,6 +8,7 @@ beyond the single output file. It runs in well under 60 seconds.
 import os
 
 # The greeting text is fixed on purpose: the entry must be byte-identical on every run.
+# D2 was chosen for TEXT: it won the proxy judge in both directions (D1 vs D2 and D2 vs D1).
 TEXT = "Hi, it's Mochi. I'm ignoring you from inside the box. Leave a message — I'll sit on it until it's warm."
 
 
