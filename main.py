@@ -13,6 +13,8 @@ TEXT = "Hi, it's Mochi. I'm ignoring you from inside the box. Leave a message â€
 
 
 # Entry point: gate the text, then write it plus a newline and verify the round-trip.
+# The length gate keeps the entry inside the 1-200 char bounty limit, and the
+# round-trip assert proves the file on disk is exactly TEXT + newline (byte-identical every run).
 def main() -> None:
     assert 1 <= len(TEXT) <= 200, "entry text out of range"
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
